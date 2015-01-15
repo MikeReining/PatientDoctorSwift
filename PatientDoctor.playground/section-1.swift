@@ -10,6 +10,8 @@ class Patient {
     var name: String
     var age: Int
     var validHealthCard: Bool = true
+    var symptom: String?
+    var prescription: Medication?
     init(name: String, age: Int) {
         self.name = name
         self.age = age
@@ -42,18 +44,40 @@ class Doctor {
             println("Doctor: \(self.name) rejects \(patient.name)")
         }
     }
+    
+    func givePrescription(patient: Patient, medication: Medication) {
+        if patient.symptom == "Headache" {
+            patient.prescription = medication
+            println("Patient 1 received \(medication.name)")
+            
+        }
+    }
+
+}
+
+class Medication {
+    var name: String
+    init(medName: String) {
+        self.name = medName
+    }
+}
+
+enum MedicationType {
+    case Painkiller, Allergies
 }
 
 
 
-
-// Test
+// Test - add instances
 
 var patient1 = Patient(name: "Mike", age: 35)
+patient1.symptom = "Headache"
 var patient2 = Patient(name: "Crackhead", age: 60)
 patient2.validHealthCard = false
 
 var doctor1 = Doctor(doctorName: "Doc 1", doctorSpecialization: "Throat and Nose")
+
+var med1 = Medication(medName: "Asprin")
 
 // Patient is visiting Doctor
 patient1.visitDoctor(doctor1)
@@ -65,5 +89,9 @@ doctor1.acceptPatient(patient2)
 
 // Check Doctor registry of patients
 doctor1.acceptedPatients.count // Success!
+
+// Request Prescription
+doctor1.givePrescription(patient1, medication: med1)
+
 
 
