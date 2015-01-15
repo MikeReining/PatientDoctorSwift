@@ -26,6 +26,7 @@
 		27BDCC8B1A683B560076D47E /* PatientDoctor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PatientDoctor; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BDCC8E1A683B560076D47E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		27BDCC951A683BCA0076D47E /* PatientDoctor.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PatientDoctor.playground; sourceTree = SOURCE_ROOT; };
+		27BDCC961A6841E50076D47E /* ScratchPad.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = ScratchPad.playground; path = ../ScratchPad.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 			children = (
 				27BDCC951A683BCA0076D47E /* PatientDoctor.playground */,
 				27BDCC8E1A683B560076D47E /* main.swift */,
+				27BDCC961A6841E50076D47E /* ScratchPad.playground */,
 			);
 			path = PatientDoctor;
 			sourceTree = "<group>";
